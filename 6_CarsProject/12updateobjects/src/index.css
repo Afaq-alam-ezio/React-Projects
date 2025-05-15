@@ -1,0 +1,205 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Full-screen video background */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Make sure the video stays in the background */
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Centered text box */
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent background */
+  border-radius: 15px;
+  width: 90%;
+  max-width: 900px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px); /* Adds blur effect behind the text */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #c04343;
+  font-weight: bold;
+}
+
+
+pre {
+  font-size: 1.1rem;
+  font-family: 'Courier New', monospace;
+  color: #ddd;
+  line-height: 1.6;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin-bottom: 30px;
+}
+
+/* Text Formatting for Car Details */
+h2, h3, pre {
+  margin-top: 15px;
+}
+
+/* Dropdowns */
+select {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+select:focus {
+  border: 1px solid #055b7e;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+option {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Hover effect for dropdown options */
+select option:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Text and selected car company color */
+[data-car="Ford"] {
+  color: #0054A6; /* Ford blue */
+}
+
+[data-car="Dodge"] {
+  color: #E60012; /* Dodge red */
+}
+
+[data-car="Nissan"] {
+  color: #0066B3; /* Nissan blue */
+}
+
+[data-car="Toyota"] {
+  color: #008C45; /* Toyota green */
+}
+
+[data-car="Alfa Romeo"] {
+  color: #A5002B; /* Alfa Romeo red */
+}
+
+[data-car="BMW"] {
+  color: #0066B1; /* BMW blue */
+}
+
+.selected-car {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+b {
+  font-weight: bold;
+  color: inherit; /* Inherit the car-specific color */
+}
+
+/* Add transitions for better interactivity */
+select, option {
+  transition: all 0.3s ease;
+}
+
+/* Styling the car details section */
+.car-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.car-details p {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #9e0606;
+}
+
+/* For better readability */
+.car-details span {
+  color: #ffcc00;
+}
+
+.dodge-style {
+  color: #e60012;
+  font-style: italic;
+  font-family: 'Impact', sans-serif;
+}
+
+.nissan-style {
+  color: #4f85b1;
+  font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+.toyota-style {
+  color: #810101;
+  font-family: 'Georgia', serif;
+}
+
+.bmw-style {
+  color: #3e74a0;
+  font-weight: 600;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.alfa-romeo-style {
+  color: #990000;
+  font-family: 'Lucida Console', Monaco, monospace;
+}
+
+/* fallback style */
+.default-style {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
