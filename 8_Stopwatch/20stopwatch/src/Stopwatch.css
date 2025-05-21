@@ -1,0 +1,86 @@
+/* Full page background image */
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url('https://images.pexels.com/photos/845242/pexels-photo-845242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;        /* make image cover whole screen */
+  background-repeat: no-repeat;  /* no repeat */
+  background-position: center;   /* center the image */
+  display: flex;                 /* enable flexbox for centering */
+  justify-content: center;       /* horizontal center */
+  align-items: center;           /* vertical center */
+  font-family: Arial, sans-serif; /* optional, nice font */
+}
+
+/* Style your stopwatch container */
+.stopwatch {
+  background: rgba(0, 0, 0, 0.5); /* translucent dark background */
+  padding: 20px 40px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+
+.display {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  background-color: rgb(209, 209, 209);
+  border-radius: 15px;
+  border: 2px solid black;
+  color: rgb(27, 27, 27);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* space between buttons */
+}
+
+#start{
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  transition: background-color 0.3s ease;
+  border: 2px solid black;
+  border-radius: 15px;
+  
+}
+
+#stop{
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #ee4444;
+  color: white;
+  transition: background-color 0.3s ease;
+  border: 2px solid black;
+  border-radius: 15px;
+  
+}
+
+#reset{
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #6100b1;
+  color: white;
+  transition: background-color 0.3s ease;
+  border: 2px solid black;
+  border-radius: 15px;
+  
+}
+
+.controls button:hover {
+  background-color: #45a049;
+}
